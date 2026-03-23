@@ -1,6 +1,6 @@
 /**
  * Tokens alinhados a design/design-system.json (Creator Dashboard DS).
- * Layout dashboard: grid de cards responsivo.
+ * Site estático: grid de cards responsivo.
  */
 :root {
   --page: #d7e96b;
@@ -124,7 +124,7 @@ body {
   padding: 0;
 }
 
-.wrap--dashboard {
+.wrap--wide {
   max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
@@ -208,8 +208,8 @@ body {
   padding: 1.25rem 0 2rem;
 }
 
-/* Grid tipo dashboard */
-.dashboard-grid {
+/* Grade principal do conteúdo */
+.layout-grid {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: 1fr;
@@ -217,7 +217,7 @@ body {
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
-  .dashboard-grid {
+  .layout-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
@@ -226,13 +226,14 @@ body {
     grid-column: 1 / -1;
   }
 
-  #exemplos {
+  #exemplos,
+  #duvidas {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width: 960px) {
-  .dashboard-grid {
+  .layout-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
@@ -240,9 +241,14 @@ body {
   .card--hero {
     grid-column: 1 / -1;
   }
+
+  #exemplos,
+  #duvidas {
+    grid-column: 1 / -1;
+  }
 }
 
-/* Card base — dashboard + hover com elevação e neon suave */
+/* Cards + hover com elevação e neon suave */
 .card {
   position: relative;
   background: var(--surface);
@@ -526,6 +532,117 @@ body.theme-dark .steps__tip {
   color: var(--ink);
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+.steps__gallery-intro {
+  margin: 1rem 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.steps__gallery-label {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.steps__gallery-footnote {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.cta-box {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.cta-box p {
+  margin: 0 0 0.85rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.cta-box .btn-wa {
+  margin-top: 0;
+}
+
+.faq-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-list li {
+  margin: 0;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.faq-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-list strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.gallery {
+  margin-top: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.gallery__item {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.gallery__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery__item figcaption {
+  padding: 0.55rem 0.7rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+@media (min-width: 680px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .steps__list--bullets {
