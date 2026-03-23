@@ -1,20 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Painel — Análise de conteúdo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" crossorigin src="/assets/index-CZNqGdxI.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-xBo4nQfw.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Impressão 3D fácil: fale no WhatsApp mesmo sem saber baixar STL. Orçamento e dúvidas na conversa. Sem compra no site." />
+  <title>Impressão 3D — WhatsApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#principal">Pular para o conteúdo</a>
+
+  <header class="header">
+    <div class="wrap wrap--wide header__inner">
+      <p class="brand">Impressão 3D</p>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+        Modo escuro
+      </button>
+    </div>
+  </header>
+
+  <div class="wrap wrap--wide">
+    <div class="alert" role="status">
+      <p>Nada é comprado por aqui. <strong>Tudo acontece no WhatsApp</strong> — pedido, dúvidas, orçamento e envio de arquivos.</p>
+    </div>
+  </div>
+
+  <main id="principal" class="main">
+    <div class="wrap wrap--wide">
+      <div class="layout-grid">
+        <section class="hero card card--hero" aria-labelledby="titulo">
+        <h1 id="titulo">Fale com a gente no WhatsApp</h1>
+        <p class="lead">Você <strong>não precisa saber baixar arquivo STL</strong> para começar. O pedido, o orçamento e as dúvidas são feitos <strong>só pelo WhatsApp</strong> — é por ali que a gente te orienta.</p>
+        <p class="lead lead--second">Se você já tiver o arquivo, é só mandar na conversa. Se não souber como baixar, <strong>sem problema</strong>: a gente explica com calma no mesmo chat.</p>
+
+        <p class="phone">
+          <span class="phone__label">WhatsApp:</span>
+          <span class="phone__num">(11) 93285-8640</span>
+        </p>
+
+        <a
+          class="btn-wa"
+          href="https://wa.me/5511932858640"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="btn-wa__icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp
+        </a>
+        </section>
+
+        <section class="card card--callout" aria-labelledby="dica-contato-titulo">
+          <h2 id="dica-contato-titulo" class="callout__title">Não sabe baixar o STL?</h2>
+          <p class="callout__text">Normal. Chama no <strong>WhatsApp</strong> e diz que precisa de ajuda — a gente te guia passo a passo ou faz tudo junto com você na conversa. Também pode mandar só uma <strong>ideia, foto ou link</strong> do que você viu na internet.</p>
+        </section>
+
+        <section class="steps card" id="como" aria-labelledby="como-titulo">
+        <h2 id="como-titulo">Como funciona (bem simples)</h2>
+        <p class="steps__lead">O mais importante: <strong>tudo passa pelo WhatsApp</strong>. Não precisa ser expert em computador.</p>
+        <ol class="steps__list">
+          <li>Toque no botão verde <strong>Falar no WhatsApp</strong> (aqui no site ou no cantinho da tela).</li>
+          <li>Escreva o que você quer imprimir. Pode ser uma descrição, uma <strong>foto</strong>, um <strong>link</strong> do que você viu — não precisa saber o nome do arquivo.</li>
+          <li>Se você <strong>já tiver</strong> o arquivo no formato <strong>STL</strong>, mande na conversa. Se <strong>não souber baixar</strong>, diga que precisa de ajuda: a gente orienta ali mesmo.</li>
+          <li>No mesmo chat combinamos <strong>tamanho, cor, quantidade</strong> e o <strong>valor</strong> (orçamento).</li>
+        </ol>
+        <p class="steps__tip">Resumo: não tem arquivo? Chama no WhatsApp. Tem arquivo? Manda no WhatsApp. Dúvida? WhatsApp também.</p>
+        </section>
+
+        <section class="steps card" id="stl" aria-labelledby="stl-titulo">
+        <h2 id="stl-titulo">O que é um arquivo STL? (em uma frase)</h2>
+        <p>É só o <strong>arquivo do modelo 3D</strong> que a impressora usa para saber o formato da peça. Você não precisa entender técnico: se pintar dúvida, é só perguntar no <strong>WhatsApp</strong> que a gente explica.</p>
+        </section>
+
+        <section class="steps card" id="exemplos" aria-labelledby="exemplos-titulo">
+        <h2 id="exemplos-titulo">O que é possível imprimir?</h2>
+        <p class="steps__intro">Só para ter ideia — você pode pedir qualquer coisa parecida pelo WhatsApp:</p>
+        <ul class="steps__list steps__list--bullets">
+          <li>Bonecos, miniaturas e colecionáveis</li>
+          <li>Brinquedos e peças para jogos</li>
+          <li>Suportes (celular, controle, tablet, etc.)</li>
+          <li>Decoração e luminárias</li>
+          <li>Peças de reposição e adaptadores</li>
+          <li>Organizadores e porta-trecos</li>
+          <li>Chaveiros e lembrancinhas</li>
+          <li>Peças personalizadas com nome ou logo</li>
+        </ul>
+        <p class="steps__note">Viu algo na internet que gostou? Manda o link ou uma foto no WhatsApp — a gente diz se dá para imprimir e como seguir.</p>
+        <p class="steps__gallery-intro">Abaixo tem <strong>fotos reais</strong> de peças que já saíram da impressora. Serve para você ter noção do que dá para fazer — <strong>não precisa ser igual</strong>: no WhatsApp você diz o que quer (tamanho, cor, ideia) e a gente combina.</p>
+        <p class="steps__gallery-label" id="galeria-label">Fotos de trabalhos feitos aqui</p>
+        <div class="gallery" aria-labelledby="galeria-label">
+          <figure class="gallery__item">
+            <img src="images/exemplo-1.png" alt="Miniatura colorida de personagem com capuz e tênis, impressa em 3D." loading="lazy" />
+            <figcaption>Boneco / miniatura colorida</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-2.png" alt="Estátua branca com efeito de malha vazada, impressa em 3D." loading="lazy" />
+            <figcaption>Estátua decorativa (efeito malha)</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-3.png" alt="Placa decorativa com símbolo vermelho em relevo e fundo com desenho de teia." loading="lazy" />
+            <figcaption>Placa para parede</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-4.png" alt="Várias luminárias brancas com formato geométrico penduradas no teto." loading="lazy" />
+            <figcaption>Luminárias suspensas</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-5.png" alt="Três fantasminhas brancos impressos em 3D em tamanhos diferentes." loading="lazy" />
+            <figcaption>Decoração temática (fantasminhas)</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-6.png" alt="Camaleão verde articulado impresso em 3D, segurado na mão." loading="lazy" />
+            <figcaption>Brinquedo articulado (camaleão)</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-7.png" alt="Camaleão verde articulado impresso em 3D sobre mesa de madeira." loading="lazy" />
+            <figcaption>Brinquedo articulado (outra foto)</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-8.png" alt="Miniatura colorida de personagem com capuz, vista de outro ângulo." loading="lazy" />
+            <figcaption>Miniatura colorida (outro ângulo)</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="images/exemplo-9.png" alt="Miniatura colorida de personagem com capuz em outro detalhe ou pose." loading="lazy" />
+            <figcaption>Miniatura colorida (detalhe)</figcaption>
+          </figure>
+        </div>
+        <p class="steps__gallery-footnote">Algumas fotos mostram a <strong>mesma peça</strong> de lados diferentes — é normal, assim você vê melhor o acabamento. Quer algo parecido? É só dizer no WhatsApp qual estilo você gostou.</p>
+        <div class="cta-box">
+          <p>Gostou de algum estilo da galeria? <strong>Não precisa saber o nome técnico</strong> — manda no WhatsApp: “quero um boneco parecido”, “quero luminária assim”, ou mande um print da foto.</p>
+          <a class="btn-wa" href="https://wa.me/5511932858640" target="_blank" rel="noopener noreferrer">
+            <svg class="btn-wa__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir pelo WhatsApp
+          </a>
+        </div>
+        </section>
+
+        <section class="steps card" id="duvidas" aria-labelledby="duvidas-titulo">
+          <h2 id="duvidas-titulo">Dúvidas que muita gente tem</h2>
+          <p class="steps__intro">Respostas curtas — se a sua dúvida for outra, manda no WhatsApp.</p>
+          <ul class="faq-list">
+            <li><strong>Preciso saber usar programa de 3D?</strong> Não. Você só precisa dizer o que quer ou mandar foto/link.</li>
+            <li><strong>Preciso baixar STL sozinho?</strong> Não obrigatoriamente. Se não souber, a gente te orienta no WhatsApp.</li>
+            <li><strong>Compro ou pago por este site?</strong> Não. Aqui é só informação; valor e forma de pagamento combinamos na conversa.</li>
+            <li><strong>Posso pedir algo que não está na galeria?</strong> Sim. A galeria é só inspiração — quase sempre dá para imprimir coisas parecidas ou bem diferentes.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap wrap--wide">
+      <p>Impressão 3D — pedidos, dúvidas e orçamento só pelo WhatsApp.</p>
+    </div>
+  </footer>
+
+  <a
+    class="fab"
+    href="https://wa.me/5511932858640"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
 </html>
