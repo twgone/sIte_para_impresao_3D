@@ -1,13 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "meta": {
-    "name": "Creator Dashboard — Design System",
+    "name": "Impressão 3D — referência de design",
     "version": "1.0.0",
-    "stack": "React (Vite) + Tailwind CSS v3",
+    "stack": "Site estático HTML + CSS (`index.html`, `styles.css`)",
     "sourceOfTruth": {
-      "tokens": "creator-dashboard/tailwind.config.js",
-      "baseStyles": "creator-dashboard/src/index.css",
-      "referenceImplementation": "creator-dashboard/src/App.tsx"
+      "styles": "styles.css",
+      "markup": "index.html"
     },
     "purpose": "Guia normativo para desenvolvimento e para instrução de IA: novos ecrãs e componentes devem reutilizar estes tokens, classes Tailwind e padrões de composição para manter consistência visual e de acessibilidade.",
     "locale": "Conteúdo de produto em pt-BR; nomes de tokens e classes em inglês (convencionados no código)."
@@ -28,8 +27,7 @@
     ]
   },
   "tailwind": {
-    "contentPaths": ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-    "note": "Qualquer novo ficheiro de componentes deve permanecer dentro de `src/` para o Tailwind incluir as classes."
+    "note": "Legado: o site publicado não usa Tailwind; tokens aqui servem de guia para manter `styles.css` alinhado."
   },
   "color": {
     "tokens": [
@@ -284,11 +282,11 @@
   },
   "aiWorkflow": {
     "beforeCoding": [
-      "Ler `design/design-system.json` e `creator-dashboard/tailwind.config.js`.",
-      "Reutilizar componentes existentes em `App.tsx` ou extrair para `src/components/` mantendo as mesmas classes base listadas acima."
+      "Ler `design/design-system.json` e o `styles.css` do site estático.",
+      "Manter nomes de classes e tokens coerentes com o que já existe em `index.html` / `styles.css`."
     ],
     "whenAddingTokens": [
-      "Novas cores ou raios: adicionar primeiro a `tailwind.config.js` com nome semântico, depois documentar aqui."
+      "Novas cores ou raios: definir variáveis em `styles.css` (:root / body.theme-dark) e documentar aqui se quiser."
     ],
     "consistencyChecks": [
       "Cartões: sempre `rounded-card bg-surface shadow-card` salvo variante com ribbon documentada.",
