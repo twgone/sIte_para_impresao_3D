@@ -715,7 +715,7 @@ summary::-webkit-details-marker { display: none; }
   background: var(--surface-raised);
 }
 
-.item-card__emoji { font-size: 2rem; line-height: 1; }
+.item-card__icon { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; color: var(--accent); opacity: 0.9; }
 
 .item-card__label {
   font-size: 0.85rem;
@@ -1087,4 +1087,3 @@ summary::-webkit-details-marker { display: none; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; }
 }
-
