@@ -63,6 +63,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  padding-bottom: 52px; /* espaço para o notice strip fixo no rodapé */
 }
 
 img { display: block; max-width: 100%; }
@@ -519,10 +520,17 @@ summary::-webkit-details-marker { display: none; }
    NOTICE STRIP
    ============================================= */
 .notice-strip {
-  background: rgba(56,189,248,0.08);
-  border-top: 1px solid rgba(56,189,248,0.18);
-  border-bottom: 1px solid rgba(56,189,248,0.18);
-  padding: 0.85rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 95;
+  background: rgba(10,11,15,0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(56,189,248,0.3);
+  padding: 0.75rem 0;
+  box-shadow: 0 -4px 24px rgba(56,189,248,0.08);
 }
 
 .notice-strip .container {
@@ -969,7 +977,7 @@ summary::-webkit-details-marker { display: none; }
 .fab {
   position: fixed;
   right: 1.25rem;
-  bottom: 1.25rem;
+  bottom: calc(1.25rem + 52px); /* acima do notice strip fixo */
   z-index: 90;
   display: flex;
   align-items: center;
@@ -1086,4 +1094,282 @@ summary::-webkit-details-marker { display: none; }
   }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* =============================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+   ============================================= */
+@media (max-width: 767px) {
+
+  /* --- Hero --- */
+  .hero {
+    min-height: 100svh;
+    padding: 90px 0 60px;
+    align-items: flex-start;
+  }
+
+  .hero__content {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+
+  .hero__subtitle {
+    font-size: 0.97rem;
+    padding: 0 0.25rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .hero__actions .btn-wa--large,
+  .hero__actions .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero__phone {
+    font-size: 0.875rem;
+  }
+
+  .hero__tags {
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+  }
+
+  .tag {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .hero__scroll-hint {
+    bottom: 1.25rem;
+  }
+
+  /* --- Navbar --- */
+  .navbar__inner {
+    height: 60px;
+  }
+
+  .navbar__brand {
+    font-size: 1rem;
+  }
+
+  /* --- Sections --- */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section__header {
+    margin-bottom: 2rem;
+  }
+
+  .section__title {
+    font-size: clamp(1.55rem, 6vw, 2rem);
+  }
+
+  .section__subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* --- Notice Strip --- */
+  .notice-strip {
+    padding: 0.65rem 0;
+  }
+
+  .notice-strip .container {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  /* --- Steps grid (mobile: verticais com ícone à esquerda) --- */
+  .steps-grid {
+    gap: 1rem;
+  }
+
+  .step-card {
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .step-card__number {
+    font-size: 2rem;
+    min-width: 3rem;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  .step-card__icon {
+    display: none;
+  }
+
+  .step-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .step-card__text {
+    font-size: 0.875rem;
+  }
+
+  .tip-box {
+    margin-top: 1.5rem;
+    padding: 1rem 1.125rem;
+    gap: 0.75rem;
+  }
+
+  .tip-box p {
+    font-size: 0.875rem;
+  }
+
+  /* --- Items grid (O que pode imprimir) --- */
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .item-card {
+    padding: 1.1rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .item-card__label {
+    font-size: 0.8rem;
+  }
+
+  /* --- Gallery: 2 colunas no mobile --- */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .gallery__item img {
+    aspect-ratio: 1/1;
+  }
+
+  .gallery__item figcaption {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .gallery-cta {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+  .gallery-cta .btn-wa--large {
+    width: 100%;
+    max-width: 340px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* --- FAQ --- */
+  .faq-item__question {
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+    gap: 0.75rem;
+  }
+
+  .faq-item__answer {
+    padding: 0 1.1rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* --- CTA Section --- */
+  .cta-section {
+    padding: 4rem 0;
+  }
+
+  .cta-section__title {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+    letter-spacing: -0.02em;
+  }
+
+  .cta-section__subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .cta-section__actions .btn-wa--large {
+    width: 100%;
+    max-width: 340px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 2.5rem 0 5.5rem;
+  }
+
+  /* --- FAB: acima do notice strip fixo no mobile --- */
+  .fab {
+    width: 54px;
+    height: 54px;
+    right: 1rem;
+    bottom: calc(1rem + 50px);
+  }
+
+  /* --- Notice strip menor no mobile --- */
+  .notice-strip {
+    padding: 0.6rem 0;
+  }
+
+  .notice-strip .container {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  /* --- Lightbox: ajuste para telas pequenas --- */
+  .lightbox {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .lightbox__img {
+    max-width: 95vw;
+    max-height: 75vh;
+    border-radius: var(--radius-sm);
+  }
+
+  .lightbox__close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra ajuste para telas muito pequenas (<380px) */
+@media (max-width: 380px) {
+  .hero__title {
+    font-size: 1.9rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__tags {
+    display: none;
+  }
 }
