@@ -950,4 +950,3 @@ body.cursor-active .cursor-follower { width: 48px; height: 48px; border-color: r
   .gallery { grid-template-columns: 1fr; }
   .gallery__item--tall { grid-row: span 1; }
 }
-
